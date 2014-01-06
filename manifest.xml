@@ -1,0 +1,18 @@
+<package>
+  <description brief="geographic_lib">
+
+     geographic_lib
+
+  </description>
+  <author>Stefan Leutenegger</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/geographic_lib</url>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lGeographic" />
+  </export>
+
+</package>
+
+
