@@ -1,0 +1,15 @@
+<package format="2">
+  <name>geographic_lib</name>
+  <version>1.8.0</version>
+  <description>geographic_lib</description>
+  <maintainer email="charles@karney.com">Charles Karney</maintainer>
+
+  <license>MIT/X11 License</license>
+
+  <url type="website">http://geographiclib.sourceforge.net/</url>
+
+  <author>Charles Karney</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+</package>
