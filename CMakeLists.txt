@@ -13,7 +13,7 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 ExternalProject_Add(
     GeographicLib
     URL http://downloads.sourceforge.net/project/geographiclib/distrib/GeographicLib-1.34.tar.gz
-    PATCH_COMMAND mkdir ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/data
+    PATCH_COMMAND mkdir -p ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/data
     CONFIGURE_COMMAND cmake -D CMAKE_INSTALL_PREFIX=${CATKIN_DEVEL_PREFIX} -D GEOGRAPHICLIB_DATA=${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/data .
     BUILD_COMMAND make -j8
     INSTALL_COMMAND make install && 
@@ -28,4 +28,5 @@ target_link_libraries(${PROJECT_NAME}
 
 cs_install()
 
-cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include)
+cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include
+          CFG_EXTRAS ceres-extras.cmake)
